@@ -1,19 +1,14 @@
 exports.processData = function(n, k, votes) {    
-    return [3,0,-2];
+  var i,
+      j;
+  for(i = 0; i < n-k+1; i++){
+    console.log(i, votes[i]);
+    var str = '';
+    for(j = 0; j < k; j++){
+      str += ' '+votes[i+j];
+    }
+    console.log(str);
+  }
+  return "something";
+  // [3,0,-2];
 }
-
-
-process.stdin.resume();
-process.stdin.setEncoding("ascii");
-_input = [];
-var i = 0
-
-process.stdin.on("data", function (input) {
-    _input[i] = input.trim();
-    i++;
-});
-
-process.stdin.on("end", function () {
-   // console.log(processData(_input));
-   console.log(_input);
-});
