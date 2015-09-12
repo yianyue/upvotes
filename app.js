@@ -11,5 +11,5 @@ process.stdin.on("data", function (input) {
 });
 
 process.stdin.on("end", function () {
-   console.log(upvotes.processData(_input[0], _input[1], _input[2]));
+   console.log(upvotes.processData(parseInt(_input[0]), parseInt(_input[1]), _input[2]));
 });
