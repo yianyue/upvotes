@@ -6,17 +6,20 @@ exports.processData = function(n, k, votes) {
     var nonDecr = 0;    
 
     for(j = i; j < i+k-1; j++){
-      // find non-decr.
+      // Non-decreasing
       if(votes[j] <= votes[j+1]){
         arr.push(votes[j+1]);
       } else {
-        nonDecr += arr.length;
+        // Total number of non-decreasing subset = S(S−1)/2 
+        nonDecr += (arr.length - 1)*arr.length/2;
         console.log(arr);
-        arr = [];
+        arr = [votes[j+1]];
       };
+      // Non-increasing
+      
     }
-    
-    console.log(arr);
+    nonDecr += (arr.length - 1)*arr.length/2;
+    console.log(arr, nonDecr);
   }
   return "something";
   // [3,0,-2];
