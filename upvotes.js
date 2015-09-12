@@ -1,17 +1,19 @@
-function processData(input) {
-    var i;
-    for (i = 0; i < parseInt(input); i++) {
-        console.log("hello world");
-    }
+exports.processData = function(n, k, votes) {    
+    return [3,0,-2];
 }
+
 
 process.stdin.resume();
 process.stdin.setEncoding("ascii");
-_input = "";
+_input = [];
+var i = 0
+
 process.stdin.on("data", function (input) {
-    _input += input;
+    _input[i] = input.trim();
+    i++;
 });
 
 process.stdin.on("end", function () {
-   processData(_input);
+   // console.log(processData(_input));
+   console.log(_input);
 });
