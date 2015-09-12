@@ -4,8 +4,8 @@
   "description": "",
   "main": "upvotes.js",
   "scripts": {
-    "test": "make test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Yi An Yue",
   "license": "ISC"
 }
