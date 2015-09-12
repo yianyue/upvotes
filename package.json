@@ -1,0 +1,11 @@
+{
+  "name": "quora-upvotes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "upvotes.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "author": "",
+  "license": "ISC"
+}
