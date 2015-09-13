@@ -63,7 +63,8 @@ Status: Success
 
 
 TestCase #13
-Status: Terminated due to timeout
+Status: Success
+
 
 TestCase #14
 Status: Terminated due to timeout
@@ -72,7 +73,7 @@ TestCase #15
 Status: Terminated due to timeout
 
 TestCase #16
-Status: Wrong Answer
+Status: Terminated due to timeout
 
 TestCase #17
 Status: Wrong Answer
@@ -84,7 +85,7 @@ TestCase #19
 Status: Wrong Answer
 
 TestCase #20
-Status: Abort Called
+Status: Wrong Answer
 
 TestCase #21
 Status: Abort Called
