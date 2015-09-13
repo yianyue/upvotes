@@ -2,7 +2,11 @@ function processData(input) {
   var inputs = input.split('\n');
   var n = parseInt(inputs[0].split(' ')[0]);
   var k = parseInt(inputs[0].split(' ')[1]);
-  var votes = inputs[1].split(' ');
+  var votes = [];
+  
+  inputs[1].split(' ').forEach(function(el){
+    votes.push(parseInt(el));
+  });
   
   var i, j, l;
   var result = [];
