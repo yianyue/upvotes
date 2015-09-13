@@ -1,20 +1,3 @@
-Live Submission (FAQ):
-
-Source File:   
-
-
-
-Submit and Test
-
-Click here to apply
-TestCase #0
-Status: Success
-Output:
-3
-0
--2
-
-
 TestCase #1
 Status: Success
 
@@ -76,34 +59,39 @@ TestCase #16
 Status: Terminated due to timeout
 
 TestCase #17
-Status: Wrong Answer
+Status: Terminated due to timeout
 
 TestCase #18
-Status: Wrong Answer
+Status: Success
+
 
 TestCase #19
-Status: Wrong Answer
+Status: Terminated due to timeout
 
 TestCase #20
-Status: Wrong Answer
+Status: Success
+
 
 TestCase #21
-Status: Abort Called
+Status: Success
+
 
 TestCase #22
-Status: Abort Called
+Status: Success
+
 
 TestCase #23
-Status: Abort Called
+Status: Success
+
 
 TestCase #24
-Status: Abort Called
+Status: Terminated due to timeout
 
 TestCase #25
-Status: Abort Called
+Status: Wrong Answer
 
 TestCase #26
-Status: Abort Called
+Status: Wrong Answer
 
 TestCase #27
 Status: Abort Called
@@ -112,4 +100,4 @@ TestCase #28
 Status: Abort Called
 
 TestCase #29
-Status: Abort Called
+Status: Wrong Answer
