@@ -2,32 +2,28 @@ exports.processData = function(n, k, votes) {
   var i, j, l;
   var result = [];
   for(i = 0; i < n-k+1; i++){
-    var str = '';
-    var arr = [votes[i]];
-    var arr2 = [votes[i]];
+    var counterD = 1;
+    var counterI = 1;
     var nonDecr = 0;
     var nonIncr = 0;    
 
-    for(j = i; j < i+k-1; j++){
-      // Non-decreasing
-      if(votes[j] <= votes[j+1]){
-        arr.push(votes[j+1]);
+    for(var j = i; j < i+k-1; j++){
+      if(votes[j] == votes[j+1]){
+        counterD += 1;
+        counterI += 1;
+      } else if (votes[j] < votes[j+1]){
+        counterD += 1;
+        nonIncr += (counterI - 1)*counterI/2;
+        counterI = 1;
       } else {
-        // Total number of non-decreasing subset = S(S−1)/2 
-        nonDecr += (arr.length - 1)*arr.length/2;
-        arr = [votes[j+1]];
-      };
-      // Non-increasing
-      if(votes[j] >= votes[j+1]){
-        arr2.push(votes[j+1]);
-      } else {
-        nonIncr += (arr2.length - 1)*arr2.length/2;
-        arr2 = [votes[j+1]];
-      };
-
+        counterI += 1;
+        nonDecr += (counterD - 1)*counterD/2;
+        counterD = 1;
+      }
     }
-    nonDecr += (arr.length - 1)*arr.length/2;
-    nonIncr += (arr2.length - 1)*arr2.length/2;
+    
+    nonDecr += (counterD - 1)*counterD/2;
+    nonIncr += (counterI - 1)*counterI/2;
     result.push(nonDecr - nonIncr);
   }
   return result;
