@@ -1,3 +1,11 @@
+TestCase #0
+Status: Success
+Output:
+3
+0
+-2
+
+
 TestCase #1
 Status: Success
 
@@ -88,16 +96,18 @@ TestCase #24
 Status: Terminated due to timeout
 
 TestCase #25
-Status: Wrong Answer
+Status: Success
+
 
 TestCase #26
-Status: Wrong Answer
+Status: Success
+
 
 TestCase #27
-Status: Abort Called
+Status: Terminated due to timeout
 
 TestCase #28
-Status: Abort Called
+Status: Wrong Answer
 
 TestCase #29
 Status: Wrong Answer

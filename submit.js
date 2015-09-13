@@ -3,26 +3,27 @@ function processData(input) {
   var n = parseInt(inputs[0].split(' ')[0]);
   var k = parseInt(inputs[0].split(' ')[1]);
 
-  var votes = [];
   inputs.shift();
-  inputs.join(' ').trim().split(' ').forEach(function(el){
-    votes.push(parseInt(el));
-  });
-  
-  var i, j, l;
+  var votes = [];
+  inputs = inputs.join(' ').trim().split(' ');
+  var l = inputs.length;
+// this is supposed to be faster
+  while(l--){
+    votes[l] = parseInt(inputs[l]);
+  }
 
-  for(i = 0; i < n-k+1; i++){
+  for(var i = 0; i < n-k+1; i++){
     var counter = 1;
     var counter2 = 1;
     var nonDecr = 0;
     var nonIncr = 0;    
 
-    for(j = i; j < i+k-1; j++){
+    for(var j = i; j < i+k-1; j++){
       // Non-decreasing
       if(votes[j] <= votes[j+1]){
         counter += 1;
       } else {
-        // Total number of non-decreasing subset = S(S−1)/2 
+        // Total number of non-decreasing subsets = S(S−1)/2 
         nonDecr += (counter - 1)*counter/2;
         counter = 1;
       };
@@ -51,4 +52,3 @@ process.stdin.on("data", function (input) {
 process.stdin.on("end", function () {
    processData(_input);
 });
-
