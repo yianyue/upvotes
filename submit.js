@@ -1,8 +1,13 @@
-exports.processData = function(n, k, votes) {    
+function processData(input) {    
+  var inputs = input.split('\n');
+  var n = parseInt(inputs[0].split(' ')[0]);
+  var k = parseInt(inputs[0].split(' ')[1]);
+  var votes = inputs[1].split(' ');
+  
   var i, j, l;
   var result = [];
+
   for(i = 0; i < n-k+1; i++){
-    var str = '';
     var arr = [votes[i]];
     var arr2 = [votes[i]];
     var nonDecr = 0;
@@ -24,11 +29,22 @@ exports.processData = function(n, k, votes) {
         nonIncr += (arr2.length - 1)*arr2.length/2;
         arr2 = [votes[j+1]];
       };
-
     }
     nonDecr += (arr.length - 1)*arr.length/2;
     nonIncr += (arr2.length - 1)*arr2.length/2;
-    result.push(nonDecr - nonIncr);
+    console.log(nonDecr - nonIncr)
   }
-  return result;
 }
+
+process.stdin.resume();
+process.stdin.setEncoding("ascii");
+
+_input = "";
+process.stdin.on("data", function (input) {
+    _input += input;
+});
+
+process.stdin.on("end", function () {
+   processData(_input);
+});
+
