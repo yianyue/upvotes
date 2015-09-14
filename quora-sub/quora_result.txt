@@ -1,3 +1,5 @@
+NOTE: Getting different results with the same code
+
 TestCase #0
 Status: Success
 Output:
